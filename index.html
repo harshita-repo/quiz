@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quiz</title>
+    <link rel="icon" href="logo.png">
+    
+    <!-- style.css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="welcome_text">
+            <form class="welcome_form" name="welcome_form" onsubmit="submitForm(event)">
+                <input type="text" name="name" autocomplete="off">
+                <button>Start Quiz</button>
+            </form>
+        </div>
+    </div>
+
+        <!-- start.js -->
+
+       <script>
+         function submitForm(e) {
+    e.preventDefault();
+    let name = document.forms["welcome_form"]["name"].value;
+  
+    sessionStorage.setItem("name", name);
+  
+    location.href = "quiz.html";
+  }
+    </script>
+</body>
+</html>
